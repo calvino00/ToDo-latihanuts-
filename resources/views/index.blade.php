@@ -2,6 +2,8 @@
 
 @section('body')
 <button > <a href="{{ route('todoNewForm') }}">Add</a> </button>
+<button > <a href="{{ route('todoShow')}}">Show Finish</a> </button>
+
 <table border="1">
     <tr>
         <th>ID</th>
@@ -18,6 +20,7 @@
         </td>
         <td><a href="{{ route('todoDelete',['id' => $todo->id]) }}"onclick="return confirm('Are you sure?')">Delete</a> 
             <a href="{{ route('todoUpdate',['id' => $todo->id]) }}">Edit</a></td>
+
     
     </tr>
     @endforeach

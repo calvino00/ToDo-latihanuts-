@@ -67,4 +67,11 @@ class todo extends Controller
         $this->todoRepo->update($request->id,$newtodo);
         return redirect(route('todoIndex'));
     }
+
+    public function show()
+    {
+        $todos = todoModel::all();
+        return view('todo.Show', ['todos' => $todos]);
+    }
+    
 }

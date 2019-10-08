@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/todo','todo@index');
 Route::get('/hello/{name}','Hello@Show');
 Route::get('/todo','todo@index')->name('todoIndex');
+Route::get('/todo/show','todo@show')->name('todoShow');
 Route::get('/todo/new','todo@new_form')->name('todoNewForm');
 Route::post('/todo','todo@save')->name('todoCreate');
 Route::get('/todo/{id}','todo@detail')->name('todoDetail');
